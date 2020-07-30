@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <title>Timer</title>
   </head>
   <body>
-    <svg width="400" height="400">
-      <circle
-        r="190"
-        cx="200"
-        cy="200"
-        fill="transparent"
-        stroke="blue"
-        stroke-width="15"
-        transform="rotate(-90, 200, 200)"
-      />
-    </svg>
-    <input type="number" id="duration" />
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
+    <div class="timer">
+      <div class="controls">
+        <input type="number" id="duration" value="3" />
+        <div class="button">
+          <button id="start"><i class="fas fa-play"></i></button>
+          <button id="pause"><i class="fas fa-pause"></i></button>
+        </div>
+      </div>
+      <svg class="dial">
+        <circle
+          r="190"
+          cx="200"
+          cy="200"
+          fill="transparent"
+          stroke="blue"
+          stroke-width="15"
+          transform="rotate(-90, 200, 200)"
+        />
+      </svg>
+    </div>
 
     <!-- Script -->
     <script src="./src/js/Timer.js"></script>
